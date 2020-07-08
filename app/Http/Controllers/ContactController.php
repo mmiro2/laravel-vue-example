@@ -12,8 +12,8 @@ class ContactController extends Controller
 		$this->validate($request, [
             				'name' => 'required|string|max:50',
             				'email' => 'required|email:rfc,dns|max:50',
-            				'phone' => 'numeric',
-            				'message' => 'string|max:500',
+            				'phone' => 'required|numeric',
+            				'message' => 'required|string|max:500',
 				]);
 
 		// if valid mass assign input from vue form
