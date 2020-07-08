@@ -1962,7 +1962,8 @@ __webpack_require__.r(__webpack_exports__);
       e.preventDefault();
       this.errors = {};
       axios.post('http://www.stalkdog.com/laravel-vue-example/api/savecontact', this.fields).then(function (response) {
-        alert('Message sent!' + JSON.stringify(response));
+        //alert('Message sent!'+JSON.stringify(response));
+        alert('Message sent!');
       })["catch"](function (error) {
         if (error.response.status === 422) {
           _this.errors = error.response.data.errors || {};

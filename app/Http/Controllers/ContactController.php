@@ -19,6 +19,9 @@ class ContactController extends Controller
 		// if valid mass assign input from vue form
 		Inquirie::create($request->all());
 
+		$formdata = ['name' => $request->input('name'), 'email' => $request->input('email'), 'phone' => $request->input('phone'),'message' => $request->input('message')];
+		\Mail::to('miro@stalkdog.com')->send(new \App\Mail\FormMail($formdata));
+
 		return response()->json(null, 200);
 	}
 }

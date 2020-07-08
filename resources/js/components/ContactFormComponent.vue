@@ -52,7 +52,8 @@ export default {
 	e.preventDefault();
       this.errors = {};
       axios.post('http://www.stalkdog.com/laravel-vue-example/api/savecontact', this.fields).then(response => {
-        alert('Message sent!'+JSON.stringify(response));
+        //alert('Message sent!'+JSON.stringify(response));
+        alert('Message sent!');
       }).catch(error => {
         if (error.response.status === 422) {
           this.errors = error.response.data.errors || {};
