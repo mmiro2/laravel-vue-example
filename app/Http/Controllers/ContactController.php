@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Inquirie;
 
 class ContactController extends Controller
 {
@@ -13,9 +14,11 @@ class ContactController extends Controller
             				'email' => 'required|email:rfc,dns|max:50',
             				'phone' => 'numeric',
             				'message' => 'string|max:500',
-        				]);
+				]);
 
+		// if valid mass assign input from vue form
+		Inquirie::create($request->all());
 
-		return "response: ".$request->input('name');
+		return response()->json(null, 200);
 	}
 }
