@@ -12,9 +12,9 @@
         <label for="email" class="col-sm-2 col-form-label">Email</label>
         <div class="col-sm-10">
             <input type="email" class="form-control" id="email" v-model="fields.email" placeholder="Email...">
-        </div>
 <div v-if="errors && errors.email" class="text-danger">{{ errors.email[0] }}</div>
     </div>
+        </div>
     <div class="form-group row">
         <label for="phone" class="col-sm-2 col-form-label">Phone</label>
         <div class="col-sm-10">

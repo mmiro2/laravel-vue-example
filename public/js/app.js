@@ -37589,14 +37589,14 @@ var render = function() {
               _vm.$set(_vm.fields, "email", $event.target.value)
             }
           }
-        })
-      ]),
-      _vm._v(" "),
-      _vm.errors && _vm.errors.email
-        ? _c("div", { staticClass: "text-danger" }, [
-            _vm._v(_vm._s(_vm.errors.email[0]))
-          ])
-        : _vm._e()
+        }),
+        _vm._v(" "),
+        _vm.errors && _vm.errors.email
+          ? _c("div", { staticClass: "text-danger" }, [
+              _vm._v(_vm._s(_vm.errors.email[0]))
+            ])
+          : _vm._e()
+      ])
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "form-group row" }, [
