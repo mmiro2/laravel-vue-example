@@ -14,8 +14,17 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $response = $this->get('/');
+        //$response = $this->get('http://127.0.0.1:8000');
 
-        $response->assertStatus(200);
+	    //$response->assertStatus(200);
+	    //
+
+	    $response = $this->json('POST', 'http://127.0.0.1:8000/api/savecontact', [
+		            'name' => 'test4',
+			            'email' => 'thi@tesssssst.com'
+				        ]);
+	        // or $this->postJson in Laravel 6.x
+	    //
+	    $response->assertStatus(422);
     }
 }
