@@ -1961,7 +1961,7 @@ __webpack_require__.r(__webpack_exports__);
 
       e.preventDefault();
       this.errors = {};
-      axios.post('http://www.stalkdog.com/laravel-vue-example/api/savecontact', this.fields).then(function (response) {
+      axios.post("http://www.stalkdog.com/laravel-vue-example" + '/api/savecontact', this.fields).then(function (response) {
         //alert('Message sent!'+JSON.stringify(response));
         alert('Message sent!');
       })["catch"](function (error) {
